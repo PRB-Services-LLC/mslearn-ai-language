@@ -1,19 +1,29 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
-    <RootNamespace>audio_chat</RootNamespace>
-  </PropertyGroup>
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <RootNamespace>audio_chat</RootNamespace>
+        <UserSecretsId>b6db6fcf-d987-429a-b4af-607af4f92cb4</UserSecretsId>
+    </PropertyGroup>
 
     <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.3" />
-  </ItemGroup>
+        <PackageReference Include="Azure.AI.OpenAI"
+            Version="2.2.0-beta.4" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json"
+            Version="9.0.6" />
+        <PackageReference Include="Azure.AI.Projects"
+            Version="1.0.0-beta.9" />
+        <PackageReference Include="Azure.Identity"
+            Version="1.14.1" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets"
+            Version="9.0.6" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <None Update="appsettings.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+    <ItemGroup>
+        <None Update="appsettings.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
 
 </Project>
